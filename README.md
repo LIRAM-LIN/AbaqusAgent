@@ -28,23 +28,26 @@ Install the required Python libraries listed in `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
+```
 
 AbaqusAgent requires a working Abaqus installation. The current version was developed and tested with Abaqus 2023.
 
-Usage
+## Usage
 
-Write the simulation problem in user_requirement.txt, including geometry, material properties, boundary conditions, loading conditions, and requested outputs.
+Write the simulation problem in `user_requirement.txt`, including geometry, material properties, boundary conditions, loading conditions, and requested outputs.
 
 Run the main script:
 
+```bash
 python AbaqusBench_noArg.py
+```
 
 The framework will generate Abaqus input files, execute simulations, perform error correction if needed, and produce output and visualization files in the output directory.
 
-Acknowledgment
+## Acknowledgment
 
 This repository uses an agent skeleton adapted from prior work by Ling Yue et al., licensed under the MIT License. The implementation and application for Abaqus-based simulation are independently developed.
 
-Citation
+## Citation
 
 (To be added after paper submission)
