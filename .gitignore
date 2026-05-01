@@ -216,3 +216,21 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Abaqus simulation files
+*.odb
+*.dat
+*.sta
+*.msg
+*.rpt
+*.com
+*.prt
+*.sim
+*.lck
+*.inp~
+
+# Output folders
+output/
+outputs/
+runs/
+temp/
