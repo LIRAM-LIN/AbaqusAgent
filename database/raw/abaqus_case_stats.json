@@ -1,0 +1,34 @@
+{
+	"case_domain": [
+        "staticstressdisplacementanalysis_bending",
+		"staticstressdisplacementanalysis_tension",
+		"staticstressdisplacementanalysis_compression",
+		"staticstressdisplacementanalysis_torsion",
+		"bucklinganalysis",
+		"vibrationanalysis",
+		"dynamic_analysis_not_vibration_analysis"
+    ],
+    "case_category": [
+        "beam_under_flexural_loading",
+		"beam_under_axial_loading",
+		"beam_under_torsion_loading",
+		"solid_column_under_axial_loading",
+		"hollow_column_under_axial_loading",
+		"cylindrical_shell_under_axial_compression",
+		"shaft_with_torsion_loading",
+		"bracket",
+		"hollow_column_under_bending",
+		"flat_plate",
+		"shell_curved_plate",
+		"annular",
+		"axisymmetric_solid"
+    ],
+    "case_material": [
+		"metal",
+		"ceramics",
+		"polymer",
+		"composite",
+		"concrete",
+		"foam"
+    ]
+}
