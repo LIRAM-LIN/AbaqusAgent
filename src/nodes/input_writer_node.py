@@ -41,17 +41,6 @@ def compute_priority(subtask):
         return 3
 
 
-#
-# def parse_allrun(text: str) -> str:
-#     match = re.search(r'```(.*?)```', text, re.DOTALL)
-#
-#     return match.group(1).strip()
-#
-# def retrieve_commands(command_path) -> str:
-#     with open(command_path, 'r') as file:
-#         commands = file.readlines()
-#
-#     return f"[{', '.join([command.strip() for command in commands])}]"
 
 class CommandsPydantic(BaseModel):
     commands: List[str] = Field(description="List of commands")
@@ -121,19 +110,6 @@ def _initial_write_mode(state):
     dir_structure = write_out["dir_structure"]
     Abaqusfiles = write_out["Abaqusfiles"]
 
-    # Build Allrun via service
-    # mesh_type = state.get("mesh_type")
-    # mesh_commands = state.get("mesh_commands") or []
-    # allrun_out = build_allrun(
-    #     llm=state["llm_service"],
-    #     case_dir=state["case_dir"],
-    #     config=config,
-    #     dir_structure=dir_structure,
-    #     case_info=state["case_info"],
-    #     allrun_reference=state["allrun_reference"],
-    #     mesh_type=mesh_type,
-    #     mesh_commands=mesh_commands,
-    # )
 
     return {
         "dir_structure": dir_structure,

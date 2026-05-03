@@ -75,7 +75,7 @@ def visualization_node(state: Dict[str, Any]) -> Dict[str, Any]:
     env["ABAQUS_ODB_PATH"] = odb_path
     env["ABAQUS_POST_DIR"] = post_dir
 
-    abaqus_cmd = r"C:\SIMULIA\Commands\abaqus.bat"
+    abaqus_cmd = r"C:\SIMULIA\Commands\abaqus.bat"     # Default Abaqus command path; change this based on your local Abaqus installation.
 
     cmd = [
         abaqus_cmd,

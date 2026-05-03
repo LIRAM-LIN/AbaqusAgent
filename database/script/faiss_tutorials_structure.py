@@ -35,12 +35,12 @@ def tokenize(text: str) -> str:
 def main():
    # Step 1: Parse command-line arguments
     parser = argparse.ArgumentParser(
-        description="Process OpenFOAM case data and store embeddings in FAISS."
+        description="Process AbaqusAgent case data and store embeddings in FAISS."
     )
     parser.add_argument(
         "--database_path",
         type=str,
-        default=r"C:\Users\sarkert\AbaqusAgent\database\script\database",  #this is harde-coded, the user should change this accordingly
+        default=r"database\script\database",  # Default database path; change this if your database is stored elsewhere.
         help="Path to the database directory (default: '../../')",
     )
         
@@ -99,7 +99,8 @@ def main():
 
     # Step 4: Compute embeddings and store them in FAISS
 
-    load_dotenv(r"C:\Users\sarkert\AbaqusAgent\.env") # this is hard-coded, the user should change this accordingly
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    load_dotenv(BASE_DIR / ".env") # Default database path; change this if your database is stored elsewhere.
 
     os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY", "").strip()
     if not os.environ["OPENAI_API_KEY"]:
