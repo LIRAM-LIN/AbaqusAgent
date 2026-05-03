@@ -19,18 +19,14 @@ def llm_requires_hpc(state: GraphState) -> bool:
 
     system_prompt = (
         "You are an expert in AbaqusAgent workflow analysis. "
-        "Analyze the user requirement to determine if they want to run the simulation on HPC (High Performance Computing) or locally. "
-        "Look for keywords like: HPC, cluster, supercomputer, SLURM, PBS, job queue, "
-        "parallel computing, distributed computing, or any mention of running on remote systems. "
-        "If the user explicitly mentions or implies they want to run on HPC/cluster, return 'hpc_run'. "
-        "If they want to run locally or don't specify, return 'local_run'. "
-        "Be conservative - if unsure, assume local run unless clearly specified otherwise."
-        "Only return 'hpc_run' or 'local_run'. Don't return anything else."
+        "The current AbaqusAgent setup supports only local Abaqus execution using an installed and licensed Abaqus software environment. "
+        "Analyze the user requirement and return only 'local_run'. "
+        "Do not return anything else."
     )
 
     user_prompt = (
         f"User requirement: {user_requirement}\n\n"
-        "return 'hpc_run' or 'local_run'"
+        "Return only: 'local_run'."
     )
 
     response = state["llm_service"].invoke(user_prompt, system_prompt)
