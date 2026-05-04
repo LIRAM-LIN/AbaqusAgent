@@ -3,12 +3,8 @@ import subprocess
 import sys
 import argparse
 import shlex
-#from dotenv import load_dotenv
 from dotenv import load_dotenv
 from pathlib import Path
-#load the API code here
-env_path = Path(__file__).resolve().parent / ".env"
-load_dotenv(env_path, override=True)
 
 def parse_args():
     """

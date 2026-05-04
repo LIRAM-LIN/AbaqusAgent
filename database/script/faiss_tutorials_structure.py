@@ -1,22 +1,20 @@
-#localEnv.VariableUsed
 import os
 import re
 import argparse
 from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
-
 from langchain_community.vectorstores import FAISS
 from langchain_openai.embeddings import OpenAIEmbeddings
 from langchain_core.documents import Document
 
 """
 This script builds a FAISS vector index from the raw detailed tutorial contents 
-so Foam‑Agent can retrieve similar cases during RAG.
+so AbaqusAgent can retrieve similar cases during RAG.
 It reads:
-    database/raw/AbaqusAgent_tutorials_details.txt
+    database\script\database\AbaqusAgent_tutorials_details.txt"
 and writes a FAISS index to:
-    database/faiss/AbaqusAgent_tutorials_details
+    database\script\database\faiss\AbaqusAgent_tutorials_details
 """
 
 # Function to extract specific fields from text
@@ -98,10 +96,6 @@ def main():
         ))
 
     # Step 4: Compute embeddings and store them in FAISS
-
-    BASE_DIR = Path(__file__).resolve().parent.parent
-    load_dotenv(BASE_DIR / ".env") # Default database path; change this if your database is stored elsewhere.
-
     os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY", "").strip()
     if not os.environ["OPENAI_API_KEY"]:
         raise RuntimeError("OPENAI_API_KEY missing (after loading .env)")
