@@ -42,7 +42,7 @@ pip install -r requirements.txt
 ```
 
 ## Requirements:
-- Abaqus 2023 (or compatible version)
+- Installed Abaqus. Education license of Abaqus is free. 
 - Python environment with required libraries
 
 --------------------------------------------------
@@ -58,9 +58,11 @@ pip install -r requirements.txt
    These are required for proper execution, as the framework uses both APIs.  
    On Windows, add them under **User Variables** in **Environment Variables**.
 
-3. Open the project in PyCharm or your preferred IDE, and select **"Trust Project"** when prompted. This ensures that the correct project configuration is used and that the intended `main.py` is executed. Also, make sure all required libraries are installed in the project’s Python environment.
+   If the user doesn't have both the API keys, some local adjustments are needed to replace the ANTHROPIC_API_KEY to OPENAI_API_KEY or vice versa.
 
-4. Before running a new simulation, check the output folder for any `.lck` file:
+4. Open the project in PyCharm or your preferred IDE, and select **"Trust Project"** when prompted in PyCharm. This ensures that the correct project configuration is used and that the intended `main.py` is executed. Also, make sure all required libraries are installed in the project’s Python environment.
+
+5. Before running a new simulation, check the output folder for any `.lck` file:
    - If an `.odb` file is still open, close it to automatically remove the `.lck` file.
    - If the `.lck` file persists, delete it manually before running a new case.
 
