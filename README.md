@@ -103,5 +103,14 @@ This repository builds on an agent skeleton adapted from prior work licensed und
 
 ## Citation
 
-To be added after paper submission
---------------------------------------------------
+```
+@misc{sarker2026multiaiagentframeworkenablingendtoend,
+      title={A Multi-AI-agent Framework Enabling End-to-end Finite Element Analysis for Solid Mechanics Problems}, 
+      author={Titu Ranjan Sarker and Muhammed Jawaad Zulqernine and Ling Yue and Shaowu Pan and Chenxi Wang and Shiyao Lin},
+      year={2026},
+      eprint={2606.00138},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2606.00138}, 
+}
+```
